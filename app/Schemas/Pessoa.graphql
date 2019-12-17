@@ -1,0 +1,24 @@
+type Query {
+  pessoas: [Pessoa]
+  pessoa: Pessoa
+}
+
+type Mutation {
+  adicionarPessoa(    
+    nome: String!
+    sexo: String!
+    cpf: String!
+    ativo: Boolean       
+  ): Pessoa
+  deletarPessoa(
+    id: ID!
+  ): Pessoa
+}
+
+type Pessoa {
+  id: ID!
+  nome: String!
+  sexo: String!
+  cpf: String!
+  ativo: Boolean!
+}

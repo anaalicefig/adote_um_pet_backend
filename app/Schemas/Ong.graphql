@@ -1,0 +1,5 @@
+type Ong {
+  id: ID!
+  nome: String!
+  ativo: Boolean!
+}
