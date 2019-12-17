@@ -5,14 +5,14 @@ const Schema = use('Schema')
 
 class AddEnderecoIdToPessoaSchema extends Schema {
   up () {
-    this.table('add_endereco_id_to_pessoas', (table) => {
-      // alter table
+    this.table('pessoa', (table) => {
+      table.integer('endereco_id').references('id').inTable('endereco')
     })
   }
 
   down () {
-    this.table('add_endereco_id_to_pessoas', (table) => {
-      // reverse alternations
+    this.table('pessoa', (table) => {
+      table.dropColumn('endereco_id')
     })
   }
 }

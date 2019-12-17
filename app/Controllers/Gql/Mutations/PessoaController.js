@@ -7,8 +7,7 @@ class PessoaController {
     this._controller = new Pessoa()
   }
 
-  async adicionarPessoa(parent, arg, ctx) {
-    console.log(arg)
+  async adicionarPessoa(parent, arg, ctx) {    
     const pessoa = this._controller.create(arg)
 
     return pessoa

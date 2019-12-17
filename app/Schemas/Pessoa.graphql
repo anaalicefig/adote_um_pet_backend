@@ -7,8 +7,8 @@ type Mutation {
   adicionarPessoa(    
     nome: String!
     sexo: String!
-    cpf: String!
-    ativo: Boolean       
+    cpf: String!    
+    endereco_id: ID!
   ): Pessoa
   deletarPessoa(
     id: ID!
@@ -21,4 +21,5 @@ type Pessoa {
   sexo: String!
   cpf: String!
   ativo: Boolean!
+  endereco_id: ID!
 }

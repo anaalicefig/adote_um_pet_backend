@@ -9,6 +9,14 @@ type Mutation {
   deletarUsuario(
     id: ID!
   ): Usuario
+  adicionarUsuario(
+    username: String!
+    email: String!
+    password: String!
+    tipo: String!
+    ong_id: Int
+    pessoa_id: Int
+  ): Usuario
 }
 
 type Usuario {
@@ -17,4 +25,6 @@ type Usuario {
   email: String!
   password: String!
   tipo: String!
+  ong_id: Int
+  pessoa_id: Int
 }

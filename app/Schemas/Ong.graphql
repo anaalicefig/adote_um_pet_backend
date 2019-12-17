@@ -1,5 +1,20 @@
+type Query {
+  ongs: [Ong!]!
+  ong(
+    id: ID!
+  ): Ong!
+}
+
+type Mutation {
+  adicionarOng(
+    nome: String!
+    endereco_id: ID!
+  )
+}
+
 type Ong {
   id: ID!
   nome: String!
   ativo: Boolean!
+  endereco_id: ID!
 }

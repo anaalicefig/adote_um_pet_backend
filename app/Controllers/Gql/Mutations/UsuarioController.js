@@ -7,6 +7,12 @@ class UsuarioController {
     this._controller = new Usuario()
   }
 
+  async adicionarUsuario(parent, args, ctx) {
+    const response = await this._controller.create(args)
+
+    return response
+  }
+
   async deletarUsuario(parent, { id }, ctx) {
     const response = await this._controller.destroy(id)
 
